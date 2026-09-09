@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { workflowSteps } from "@/data/site";
 
 export default function Workflow() {

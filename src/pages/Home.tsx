@@ -6,7 +6,7 @@ import {
   BarChart3,
   Workflow as WorkflowIcon,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
 import { metrics, whyOcp, techCapabilities } from "@/data/site";

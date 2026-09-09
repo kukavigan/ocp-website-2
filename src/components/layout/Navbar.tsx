@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { navLinks } from "@/data/site";
 import Button from "@/components/ui/Button";
 import logo from "@/assets/ocp-logo.png";
@@ -11,25 +10,23 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-surface-200/70 bg-brand-navy backdrop-blur-xl">
       <div className="container-mw container-px flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <a href="#/" className="flex items-center">
           <img
             src={logo}
             alt="On Call Prime"
             className="h-14 w-auto object-contain"
           />
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.slice(1).map((link) => (
-            <NavLink
+            <a
               key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                `text-sm font-semibold transition-colors ${isActive ? "text-brand-blue" : "text-white hover:text-brand-blue"}`
-              }
+              href={`#/` + link.path.replace(/^\/+/, "")}
+              className="text-sm font-semibold text-white transition-colors hover:text-brand-blue"
             >
               {link.label}
-            </NavLink>
+            </a>
           ))}
         </nav>
         <div className="hidden lg:block">
@@ -53,15 +50,16 @@ export default function Navbar() {
         >
           <div className="container-mw flex flex-col gap-4">
             {navLinks.map((link) => (
-              <NavLink
+              <a
                 key={link.path}
-                to={link.path}
+                href={`#/` + link.path.replace(/^\/+/, "")}
                 onClick={() => setOpen(false)}
                 className="py-1 text-base font-semibold text-brand-navy"
               >
                 {link.label}
-              </NavLink>
+              </a>
             ))}
+
             <Button to="/contact" onClick={() => setOpen(false)}>
               Schedule a Consultation
             </Button>
