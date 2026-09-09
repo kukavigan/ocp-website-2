@@ -34,12 +34,13 @@ export default function Navbar() {
             Let's Talk <ArrowUpRight className="h-4 w-4" />
           </Button>
         </div>
+
         <button
-          className="rounded-lg p-2 text-brand-navy lg:hidden"
+          className="rounded-lg p-2 text-white transition-colors hover:text-brand-blue lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </div>
       {open && (
