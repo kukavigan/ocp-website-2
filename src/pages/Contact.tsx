@@ -1,27 +1,32 @@
 import { FormEvent, useState } from "react";
-import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2 } from "lucide-react";
+
+import { Mail, MapPin, ArrowUpRight, CheckCircle2 } from "lucide-react";
+
 import { companyInfo } from "@/data/site";
 import { images } from "@/data/images";
+
 import PageHero from "@/components/sections/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 
 const serviceOptions = [
-  "Claims File Services",
+  "Claims Operations",
+  "Claim Quality Assurance (QA)",
   "FNOL Support",
+  "Adjuster Support",
   "Customer Care",
   "Back Office Operations",
-  "QA & Auditing",
-  "Adjuster Support",
-  "Survey & Reporting",
   "Multiple Services",
 ];
+
 export default function Contact() {
   const [sent, setSent] = useState(false);
+
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSent(true);
   };
+
   return (
     <div>
       <PageHero
@@ -33,6 +38,7 @@ export default function Contact() {
         ctaTo="#contact-form"
       />
 
+      {/* CONTACT SECTION */}
       <section
         id="content"
         className="relative overflow-hidden bg-brand-navy py-20 text-white md:py-28"
@@ -69,6 +75,7 @@ export default function Contact() {
 
                 {/* Contact details */}
                 <div className="mt-10 border-t border-white/10">
+                  {/* Email */}
                   <a
                     href={`mailto:${companyInfo.email}`}
                     className="group flex items-center gap-4 border-b border-white/10 py-5"
@@ -88,25 +95,7 @@ export default function Contact() {
                     </div>
                   </a>
 
-                  <a
-                    href={`tel:${companyInfo.phone}`}
-                    className="group flex items-center gap-4 border-b border-white/10 py-5"
-                  >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/[0.05] text-brand-blueLight transition-all duration-300 group-hover:bg-brand-blue group-hover:text-white">
-                      <Phone className="h-4 w-4" />
-                    </div>
-
-                    <div>
-                      <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/30">
-                        Phone
-                      </p>
-
-                      <p className="mt-1 text-sm font-semibold text-white/75 transition-colors group-hover:text-white">
-                        {companyInfo.phone}
-                      </p>
-                    </div>
-                  </a>
-
+                  {/* Operations Center */}
                   <div className="flex items-start gap-4 border-b border-white/10 py-5">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/[0.05] text-brand-green">
                       <MapPin className="h-4 w-4" />
@@ -185,6 +174,7 @@ export default function Contact() {
                       onSubmit={submit}
                       className="grid gap-6 sm:grid-cols-2"
                     >
+                      {/* First Name */}
                       <label className="text-sm font-semibold text-brand-navy">
                         First name
                         <input
@@ -195,6 +185,7 @@ export default function Contact() {
                         />
                       </label>
 
+                      {/* Last Name */}
                       <label className="text-sm font-semibold text-brand-navy">
                         Last name
                         <input
@@ -205,6 +196,7 @@ export default function Contact() {
                         />
                       </label>
 
+                      {/* Work Email */}
                       <label className="text-sm font-semibold text-brand-navy sm:col-span-2">
                         Work email
                         <input
@@ -217,6 +209,7 @@ export default function Contact() {
                         />
                       </label>
 
+                      {/* Organization */}
                       <label className="text-sm font-semibold text-brand-navy sm:col-span-2">
                         Organization
                         <input
@@ -227,6 +220,7 @@ export default function Contact() {
                         />
                       </label>
 
+                      {/* Service */}
                       <label className="text-sm font-semibold text-brand-navy sm:col-span-2">
                         How can we help?
                         <select
@@ -246,6 +240,7 @@ export default function Contact() {
                         </select>
                       </label>
 
+                      {/* Message */}
                       <label className="text-sm font-semibold text-brand-navy sm:col-span-2">
                         Message
                         <textarea
@@ -257,6 +252,7 @@ export default function Contact() {
                         />
                       </label>
 
+                      {/* Submit */}
                       <div className="mt-2 sm:col-span-2">
                         <Button type="submit" size="lg">
                           Send inquiry
@@ -277,6 +273,7 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* OFFICE SECTION */}
       <section className="relative overflow-hidden bg-white py-20 md:py-28">
         {/* Background accent */}
         <div className="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-brand-blue/[0.035] blur-[100px]" />
