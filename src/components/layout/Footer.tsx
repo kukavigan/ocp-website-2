@@ -25,8 +25,8 @@ export default function Footer() {
             </div>
 
             <p className="mt-4 max-w-2xl text-2xl font-bold leading-tight tracking-tight text-white md:text-3xl">
-              Better insurance operations start with the{" "}
-              <span className="text-brand-blueLight">right partner.</span>
+              Better Operations{" "}
+              <span className="text-brand-blueLight">Better Outcome.</span>
             </p>
           </div>
 
@@ -156,24 +156,6 @@ export default function Footer() {
 
                   <p className="mt-1 break-all text-sm text-white/55 transition-colors group-hover:text-white">
                     {companyInfo.email}
-                  </p>
-                </div>
-              </a>
-
-              {/* Phone */}
-              <a
-                href={`tel:${companyInfo.phone}`}
-                className="group flex items-start gap-3 py-4"
-              >
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-blueLight" />
-
-                <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-white/25">
-                    Phone
-                  </p>
-
-                  <p className="mt-1 text-sm text-white/55 transition-colors group-hover:text-white">
-                    {companyInfo.phone}
                   </p>
                 </div>
               </a>

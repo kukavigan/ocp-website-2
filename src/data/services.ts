@@ -23,21 +23,20 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "claims-file-services",
-    title: "Claims File Services",
+    slug: "claims-operations",
+    title: "Claims Operations",
     shortDesc:
-      "Comprehensive claims file management — from intake and documentation to review and resolution support.",
+      "Operational support across the claims lifecycle, delivering consistency, accuracy, and efficiency.",
     icon: FileText,
     overview:
       "OCP manages the full lifecycle of insurance claims files with meticulous attention to detail. Our specialists handle documentation, data entry, correspondence, and file organization so that adjusters can focus on decision-making rather than administrative workload.",
     capabilities: [
-      "Claims file setup and organization",
-      "Document indexing and digital archiving",
-      "Correspondence management and logging",
-      "Data entry and validation",
-      "File review preparation",
-      "Diary and deadline tracking",
-      "Regulatory compliance documentation",
+      "Claim Setup & Administration",
+      "Coverage Verification Support",
+      "Documentation Management",
+      "Estimate Support",
+      "Subrogation Identification",
+      "Claim Closure & File Completion",
     ],
     workflow: [
       {
@@ -94,22 +93,95 @@ export const services: Service[] = [
       },
     ],
   },
+
+  {
+    slug: "claim-quality-assurance",
+    title: "Claim Quality Assurance (QA)",
+    shortDesc:
+      "Objective claim reviews that identify risk, reduce leakage, and support continuous improvement.",
+    icon: ShieldCheck,
+    overview:
+      "OCP quality assurance specialists provide independent, structured audits of claims files, customer interactions, and operational processes. We identify errors, measure compliance, and deliver actionable findings that drive continuous improvement.",
+    capabilities: [
+      "Claim File Audits",
+      "Compliance Reviews",
+      "Quality Scorecard Evaluations",
+      "Leakage Identification",
+      "Documentation Assessments",
+      "Performance Analytics & Reporting",
+      "Continuous Improvement Recommendations",
+    ],
+    workflow: [
+      {
+        step: "Sample",
+        desc: "Audit sample is selected based on risk and volume criteria.",
+      },
+      {
+        step: "Review",
+        desc: "Specialist reviews files against quality standards and checklists.",
+      },
+      {
+        step: "Score",
+        desc: "Each file is scored on accuracy, completeness, and compliance.",
+      },
+      {
+        step: "Report",
+        desc: "Findings are compiled into detailed audit reports with recommendations.",
+      },
+      {
+        step: "Improve",
+        desc: "Trends inform training updates and process refinements.",
+      },
+    ],
+    benefits: [
+      {
+        title: "Objective Quality Measurement",
+        desc: "Independent audits provide an honest quality picture.",
+      },
+      {
+        title: "Risk Reduction",
+        desc: "Catch errors before they become regulatory or financial issues.",
+      },
+      {
+        title: "Continuous Improvement",
+        desc: "Trend analysis drives targeted training and process changes.",
+      },
+      {
+        title: "Client Confidence",
+        desc: "Demonstrable quality metrics build trust with stakeholders.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What audit sampling methods do you use?",
+        a: "We use risk-based, random, and targeted sampling based on client requirements and regulatory standards.",
+      },
+      {
+        q: "Can audits be customized to our quality standards?",
+        a: "Absolutely. We build audit checklists and scoring rubrics around your specific quality framework.",
+      },
+      {
+        q: "How frequently are audits conducted?",
+        a: "Audit frequency is determined by client needs — weekly, monthly, quarterly, or project-based.",
+      },
+    ],
+  },
+
   {
     slug: "fnol-support",
     title: "FNOL Support",
     shortDesc:
-      "First Notice of Loss intake — capturing claim details accurately at the critical first touchpoint.",
+      "Accurate, efficient FNOL intake handled with care, speed and accuracy.",
     icon: PhoneCall,
     overview:
       "The first notice of loss is the foundation of every claim. OCP specialists capture, verify, and route FNOL information with speed and precision, ensuring that claims start with accurate, complete data and reach the right adjuster without delay.",
     capabilities: [
-      "24/7 FNOL intake support",
-      "Claimant interview and information gathering",
-      "Loss detail verification and cross-referencing",
-      "Photo and document collection",
-      "Policy coverage verification",
-      "Claim routing and assignment",
-      "Urgency triage and escalation",
+      "First Notice of Loss Intake ",
+      "Loss Triage & Escalation Management",
+      "Policyholder Communications",
+      "Documentation Collection",
+      "Data Verification & Validation",
+      "Catastrophe Intake Support",
     ],
     workflow: [
       {
@@ -167,21 +239,93 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "adjuster-support",
+    title: "Adjuster Support",
+    shortDesc:
+      "Administrative coordination to help you manage adjuster availability and workloads more efficiently and effectively.",
+    icon: Briefcase,
+    overview:
+      "Adjusters carry the weight of claim decisions. OCP provides dedicated support that handles research, scheduling, document collection, and administrative tasks so adjusters can focus on what matters most: accurate, timely claim decisions.",
+    capabilities: [
+      "Initial File Preparation",
+      "Documentation Gathering",
+      "Diary & Workflow Management",
+      "Administrative Claim Support",
+      "Adjuster Roster Updates",
+      "Event contact and Coordination",
+    ],
+    workflow: [
+      {
+        step: "Assign",
+        desc: "Adjuster assigns a support task to the OCP specialist team.",
+      },
+      {
+        step: "Research",
+        desc: "Specialist gathers information, documents, and coordinates parties.",
+      },
+      {
+        step: "Prepare",
+        desc: "Findings are organized into a clear summary for the adjuster.",
+      },
+      {
+        step: "Review",
+        desc: "Adjuster reviews the prepared materials and makes decisions.",
+      },
+      {
+        step: "Close",
+        desc: "Task is completed and documented in the claim file.",
+      },
+    ],
+    benefits: [
+      {
+        title: "More Claims Per Adjuster",
+        desc: "Offload admin work and increase adjuster capacity.",
+      },
+      {
+        title: "Better Prepared Files",
+        desc: "Adjusters receive organized, complete information.",
+      },
+      {
+        title: "Faster Scheduling",
+        desc: "Inspections and appointments are coordinated without adjuster involvement.",
+      },
+      {
+        title: "Reduced Burnout",
+        desc: "Sharing the workload keeps adjusters focused and effective.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How are support tasks assigned to OCP specialists?",
+        a: "Tasks can be assigned through your claims management system, email, or a dedicated coordination channel.",
+      },
+      {
+        q: "Can OCP support both field and desk adjusters?",
+        a: "Yes, we support both. Field adjusters benefit from scheduling and coordination, while desk adjusters get research and file preparation support.",
+      },
+      {
+        q: "What is the typical turnaround for a support task?",
+        a: "Turnaround depends on task complexity, but most support tasks are completed within 24 hours.",
+      },
+    ],
+  },
+
+  {
     slug: "customer-care",
     title: "Customer Care",
     shortDesc:
-      "Policyholder support that combines empathy with operational discipline across every touchpoint.",
+      "Customer care services designed to enhance the policyholder experience throughout the claim journey.",
     icon: Headphones,
     overview:
       "OCP delivers policyholder support that represents your brand with professionalism and care. From status inquiries to complaint handling, our customer care specialists are trained in both insurance processes and human communication.",
     capabilities: [
-      "Claim status inquiries and updates",
-      "Policyholder question handling",
-      "Complaint intake and escalation",
-      "Appointment scheduling",
-      "Adjuster-policyholder liaison",
-      "Satisfaction follow-up calls",
-      "Multichannel support (phone, email, chat)",
+      "Inbound Customer Support",
+      "Outbound Customer Communications",
+      "Email & Chat Support",
+      "Policyholder Claim Status Updates",
+      "Complaint Resolution Support",
+      "Escalation Management",
+      "Customer Satisfaction Follow-Up",
     ],
     workflow: [
       {
@@ -242,18 +386,18 @@ export const services: Service[] = [
     slug: "back-office-operations",
     title: "Back Office Operations",
     shortDesc:
-      "Scalable back-office support for data processing, documentation, and administrative workflows.",
+      "Reliable back-office services that keep insurance operations organized, accurate, and moving forward.",
     icon: ClipboardList,
     overview:
       "OCP provides scalable back-office support that handles the operational workload behind your claims process. From data processing to vendor coordination, we take on the tasks that keep your operations running smoothly.",
     capabilities: [
-      "Data processing and data entry",
-      "Vendor and supplier coordination",
-      "Invoice processing and validation",
-      "Report generation and distribution",
-      "Mail and correspondence handling",
-      "Document digitization and filing",
-      "Administrative task management",
+      "Data Entry & Validation",
+      "Document Processing",
+      "Workflow Administration",
+      "Reporting & Analytics Support",
+      "Claims System Updates",
+      "Vendor Administration",
+      "Payment & Invoice Processing",
     ],
     workflow: [
       {
@@ -310,150 +454,8 @@ export const services: Service[] = [
       },
     ],
   },
-  {
-    slug: "qa-auditing",
-    title: "QA & Auditing",
-    shortDesc:
-      "Independent quality assurance and audit services that uphold service standards and identify improvement areas.",
-    icon: ShieldCheck,
-    overview:
-      "OCP quality assurance specialists provide independent, structured audits of claims files, customer interactions, and operational processes. We identify errors, measure compliance, and deliver actionable findings that drive continuous improvement.",
-    capabilities: [
-      "Claims file quality audits",
-      "Customer interaction monitoring",
-      "Compliance and regulatory checks",
-      "Process adherence audits",
-      "Error pattern analysis",
-      "Corrective action recommendations",
-      "Trend reporting and dashboards",
-    ],
-    workflow: [
-      {
-        step: "Sample",
-        desc: "Audit sample is selected based on risk and volume criteria.",
-      },
-      {
-        step: "Review",
-        desc: "Specialist reviews files against quality standards and checklists.",
-      },
-      {
-        step: "Score",
-        desc: "Each file is scored on accuracy, completeness, and compliance.",
-      },
-      {
-        step: "Report",
-        desc: "Findings are compiled into detailed audit reports with recommendations.",
-      },
-      {
-        step: "Improve",
-        desc: "Trends inform training updates and process refinements.",
-      },
-    ],
-    benefits: [
-      {
-        title: "Objective Quality Measurement",
-        desc: "Independent audits provide an honest quality picture.",
-      },
-      {
-        title: "Risk Reduction",
-        desc: "Catch errors before they become regulatory or financial issues.",
-      },
-      {
-        title: "Continuous Improvement",
-        desc: "Trend analysis drives targeted training and process changes.",
-      },
-      {
-        title: "Client Confidence",
-        desc: "Demonstrable quality metrics build trust with stakeholders.",
-      },
-    ],
-    faqs: [
-      {
-        q: "What audit sampling methods do you use?",
-        a: "We use risk-based, random, and targeted sampling based on client requirements and regulatory standards.",
-      },
-      {
-        q: "Can audits be customized to our quality standards?",
-        a: "Absolutely. We build audit checklists and scoring rubrics around your specific quality framework.",
-      },
-      {
-        q: "How frequently are audits conducted?",
-        a: "Audit frequency is determined by client needs — weekly, monthly, quarterly, or project-based.",
-      },
-    ],
-  },
-  {
-    slug: "adjuster-support",
-    title: "Adjuster Support",
-    shortDesc:
-      "Dedicated support for field and desk adjusters — research, coordination, and administrative relief.",
-    icon: Briefcase,
-    overview:
-      "Adjusters carry the weight of claim decisions. OCP provides dedicated support that handles research, scheduling, document collection, and administrative tasks so adjusters can focus on what matters most: accurate, timely claim decisions.",
-    capabilities: [
-      "Claim research and information gathering",
-      "Appointment and inspection scheduling",
-      "Document and photo collection",
-      "Vendor and expert coordination",
-      "File preparation and summarization",
-      "Correspondence drafting",
-      "Report formatting and quality checks",
-    ],
-    workflow: [
-      {
-        step: "Assign",
-        desc: "Adjuster assigns a support task to the OCP specialist team.",
-      },
-      {
-        step: "Research",
-        desc: "Specialist gathers information, documents, and coordinates parties.",
-      },
-      {
-        step: "Prepare",
-        desc: "Findings are organized into a clear summary for the adjuster.",
-      },
-      {
-        step: "Review",
-        desc: "Adjuster reviews the prepared materials and makes decisions.",
-      },
-      {
-        step: "Close",
-        desc: "Task is completed and documented in the claim file.",
-      },
-    ],
-    benefits: [
-      {
-        title: "More Claims Per Adjuster",
-        desc: "Offload admin work and increase adjuster capacity.",
-      },
-      {
-        title: "Better Prepared Files",
-        desc: "Adjusters receive organized, complete information.",
-      },
-      {
-        title: "Faster Scheduling",
-        desc: "Inspections and appointments are coordinated without adjuster involvement.",
-      },
-      {
-        title: "Reduced Burnout",
-        desc: "Sharing the workload keeps adjusters focused and effective.",
-      },
-    ],
-    faqs: [
-      {
-        q: "How are support tasks assigned to OCP specialists?",
-        a: "Tasks can be assigned through your claims management system, email, or a dedicated coordination channel.",
-      },
-      {
-        q: "Can OCP support both field and desk adjusters?",
-        a: "Yes, we support both. Field adjusters benefit from scheduling and coordination, while desk adjusters get research and file preparation support.",
-      },
-      {
-        q: "What is the typical turnaround for a support task?",
-        a: "Turnaround depends on task complexity, but most support tasks are completed within 24 hours.",
-      },
-    ],
-  },
+
+  /*
   {
     slug: "survey-reporting",
     title: "Survey & Reporting",
@@ -526,4 +528,5 @@ export const services: Service[] = [
       },
     ],
   },
+  */
 ];

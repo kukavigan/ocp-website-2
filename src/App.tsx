@@ -11,8 +11,8 @@ import Industries from "@/pages/Industries";
 import Certifications from "@/pages/Certifications";
 import Careers from "@/pages/Careers";
 import Contact from "@/pages/Contact";
-
 import logo from "@/assets/ocp-logo.png";
+import CookieBanner from "@/components/CookieBanner";
 
 function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -111,7 +111,12 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {!isLoading && <AppRoutes />}
+      {!isLoading && (
+        <>
+          <AppRoutes />
+          <CookieBanner />
+        </>
+      )}
     </HashRouter>
   );
 }
