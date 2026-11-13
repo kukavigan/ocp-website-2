@@ -153,24 +153,6 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
-
-              {/* Email */}
-              <a
-                href={`mailto:${companyInfo.email}`}
-                className="group flex items-start gap-3 border-b border-white/10 py-4"
-              >
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-blueLight" />
-
-                <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-white/25">
-                    Email
-                  </p>
-
-                  <p className="mt-1 break-all text-sm text-white/55 transition-colors group-hover:text-white">
-                    {companyInfo.email}
-                  </p>
-                </div>
-              </a>
             </div>
           </div>
         </div>
