@@ -7,7 +7,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
 import ServiceDetail from "@/pages/ServiceDetail";
-import Industries from "@/pages/Industries";
+// import Industries from "@/pages/Industries";
 import Certifications from "@/pages/Certifications";
 import Careers from "@/pages/Careers";
 import Contact from "@/pages/Contact";
@@ -85,7 +85,8 @@ function AppRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
-        <Route path="/industries" element={<Industries />} />
+        {/* Industries page temporarily disabled. */}
+        {/* <Route path="/industries" element={<Industries />} /> */}
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />

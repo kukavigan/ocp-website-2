@@ -31,10 +31,10 @@ export const services: Service[] = [
     overview:
       "OCP manages the full lifecycle of insurance claims files with meticulous attention to detail. Our specialists handle documentation, data entry, correspondence, and file organization so that adjusters can focus on decision-making rather than administrative workload.",
     capabilities: [
+      "Estimate Writing and Review",
       "Claim Setup & Administration",
       "Coverage Verification Support",
       "Documentation Management",
-      "Estimate Support",
       "Subrogation Identification",
       "Claim Closure & File Completion",
     ],
@@ -180,7 +180,7 @@ export const services: Service[] = [
       "Loss Triage & Escalation Management",
       "Policyholder Communications",
       "Documentation Collection",
-      "Data Verification & Validation",
+      "Data & Policy Verification & Validation",
       "Catastrophe Intake Support",
     ],
     workflow: [
@@ -251,7 +251,7 @@ export const services: Service[] = [
       "Documentation Gathering",
       "Diary & Workflow Management",
       "Administrative Claim Support",
-      "Adjuster Roster Updates",
+      "Adjuster Roster Management & Updates",
       "Event contact and Coordination",
     ],
     workflow: [
@@ -393,7 +393,7 @@ export const services: Service[] = [
     capabilities: [
       "Data Entry & Validation",
       "Document Processing",
-      "Workflow Administration",
+      "Adjuster Roster Management & Updates",
       "Reporting & Analytics Support",
       "Claims System Updates",
       "Vendor Administration",

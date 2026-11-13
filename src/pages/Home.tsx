@@ -473,6 +473,7 @@ export default function Home() {
         {/* Bottom transition */}
         <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
       </section>
+
       {/*HERO METRICS */}
       <section className="relative z-20 -mt-5 w-full bg-white">
         <div className="container-mw container-px">
@@ -578,6 +579,120 @@ export default function Home() {
               />
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* BUILT AROUND YOUR OPERATIONS — MOVED FROM SERVICES */}
+
+      <section className="relative overflow-hidden bg-[#F7F9FC] py-20 md:py-28">
+        {/* Subtle branded background */}
+        <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.025]" />
+        <div className="pointer-events-none absolute -right-40 -top-32 h-[440px] w-[440px] rounded-full bg-brand-blue/[0.07] blur-[110px]" />
+        <div className="pointer-events-none absolute -bottom-40 -left-32 h-[400px] w-[400px] rounded-full bg-brand-green/[0.05] blur-[110px]" />
+
+        <div className="container-mw container-px relative">
+          <Reveal>
+            <div className="mx-auto max-w-4xl text-center">
+              <div className="flex items-center justify-center gap-3">
+                <span className="h-px w-9 bg-brand-green" />
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
+                  Built around your operations
+                </span>
+                <span className="h-px w-9 bg-brand-green" />
+              </div>
+
+              <h2 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-brand-navy md:text-5xl">
+                Your Operation. Your Process.{" "}
+                <span className="text-brand-blue">Our Support.</span>
+              </h2>
+
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-brand-navy/65 md:text-lg">
+                OCP adapts to your workflows, standards, and goals, delivering
+                support that feels like a natural extension of your operation.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                number: "01",
+                title: "Client-Specific Workflows",
+                description:
+                  "Processes tailored to your requirements, systems, and operational standards.",
+                icon: WorkflowIcon,
+              },
+              {
+                number: "02",
+                title: "Dedicated Support Teams",
+                description:
+                  "Teams aligned with your workflows, expectations, and service objectives.",
+                icon: Check,
+              },
+              {
+                number: "03",
+                title: "Clear Performance Reporting",
+                description:
+                  "Operational visibility into performance, quality, and capacity.",
+                icon: BarChart3,
+              },
+              {
+                number: "04",
+                title: "Scalable Capacity",
+                description:
+                  "Flexible support designed to grow alongside your business.",
+                icon: ArrowUpRight,
+              },
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{
+                    duration: 0.55,
+                    delay: index * 0.09,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  whileHover={{ y: -6 }}
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand-navy/[0.08] bg-white p-7 shadow-sm transition-all duration-300 hover:border-brand-blue/25 hover:shadow-card"
+                >
+                  <div className="absolute left-0 top-0 h-[3px] w-0 bg-gradient-to-r from-brand-blue to-brand-green transition-all duration-500 group-hover:w-full" />
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/10 text-brand-blue transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="text-xs font-bold tracking-[0.16em] text-brand-navy/20">
+                      {item.number}
+                    </span>
+                  </div>
+                  <h3 className="mt-7 text-lg font-bold leading-snug text-brand-navy">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-brand-navy/60">
+                    {item.description}
+                  </p>
+                  <div className="mt-auto pt-7">
+                    <div className="h-px w-9 bg-brand-green transition-all duration-300 group-hover:w-16" />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <Reveal delay={0.2}>
+            <div className="mt-10 flex items-center justify-center gap-3">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-green opacity-30" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-green" />
+              </span>
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-brand-navy/55">
+                Flexible by design
+              </span>
+            </div>
+          </Reveal>
         </div>
       </section>
 

@@ -5,6 +5,9 @@ import { navLinks } from "@/data/site";
 import Button from "@/components/ui/Button";
 import logo from "@/assets/ocp-logo.png";
 
+// Hide Industries without deleting it from the project
+const visibleNavLinks = navLinks.filter((link) => link.path !== "/industries");
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -16,7 +19,9 @@ export default function Navbar() {
 
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -54,10 +59,10 @@ export default function Navbar() {
 
         {/* Desktop navigation */}
         <nav className="hidden items-center gap-7 lg:flex">
-          {navLinks.slice(1).map((link) => (
+          {visibleNavLinks.slice(1).map((link) => (
             <a
               key={link.path}
-              href={`#/` + link.path.replace(/^\/+/, "")}
+              href={`#/${link.path.replace(/^\/+/, "")}`}
               className="group relative py-2 text-sm font-semibold text-white/75 transition-colors duration-300 hover:text-white"
             >
               {link.label}
@@ -75,7 +80,7 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile button */}
+        {/* Mobile menu button */}
         <button
           type="button"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white transition-all duration-300 hover:border-brand-blue/30 hover:bg-brand-blue/10 hover:text-brand-blueLight lg:hidden"
@@ -102,10 +107,10 @@ export default function Navbar() {
           >
             <div className="container-mw container-px py-6">
               <div className="flex flex-col">
-                {navLinks.map((link, i) => (
+                {visibleNavLinks.map((link, i) => (
                   <motion.a
                     key={link.path}
-                    href={`#/` + link.path.replace(/^\/+/, "")}
+                    href={`#/${link.path.replace(/^\/+/, "")}`}
                     onClick={() => setOpen(false)}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -122,11 +127,12 @@ export default function Navbar() {
                 ))}
               </div>
 
+              {/* Mobile CTA */}
               <motion.div
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  delay: navLinks.length * 0.04,
+                  delay: visibleNavLinks.length * 0.04,
                   duration: 0.25,
                 }}
                 className="mt-6"
@@ -141,6 +147,7 @@ export default function Navbar() {
                 </Button>
               </motion.div>
 
+              {/* Mobile footer */}
               <div className="mt-6 flex items-center justify-center gap-3">
                 <span className="h-px w-6 bg-white/10" />
 

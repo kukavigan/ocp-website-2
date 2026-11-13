@@ -1,7 +1,19 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Linkedin, Mail, MapPin } from "lucide-react";
 import { navLinks, companyInfo } from "@/data/site";
 import ocpLogo from "@/assets/ocp-logo.png";
+
+// Keep Industries in the project, but hide it from the footer
+const visibleNavLinks = navLinks.filter((link) => link.path !== "/industries");
+
+// Preserve the original Explore / Company grouping
+const exploreLinks = navLinks
+  .slice(1, 5)
+  .filter((link) => link.path !== "/industries");
+
+const companyLinks = navLinks
+  .slice(5)
+  .filter((link) => link.path !== "/industries");
 
 export default function Footer() {
   return (
@@ -77,7 +89,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 flex flex-col gap-3.5">
-              {navLinks.slice(1, 5).map((link) => (
+              {exploreLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -98,7 +110,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 flex flex-col gap-3.5">
-              {navLinks.slice(5).map((link) => (
+              {companyLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}

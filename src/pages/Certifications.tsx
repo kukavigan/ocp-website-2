@@ -1,9 +1,8 @@
-import { Check, LockKeyhole, ArrowUpRight } from "lucide-react";
+import { Check, LockKeyhole, ArrowUpRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { images } from "@/data/images";
 import PageHero from "@/components/sections/PageHero";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
-import CTASection from "@/components/sections/CTASection";
 import plrbLogo from "@/assets/plrb_logo_2023-1.png";
 
 export default function Certifications() {
@@ -12,9 +11,9 @@ export default function Certifications() {
       <PageHero
         eyebrow="Certifications"
         title="Trust is built into the process."
-        description="OCP’s quality and information security practices are grounded in internationally recognized management systems."
+        description="OCP’s commitment to quality and information security is supported by internationally recognized management systems."
         image="agent"
-        cta="Talk about our standards"
+        cta="Learn More"
       />
       <section
         id="content"
@@ -79,6 +78,29 @@ export default function Certifications() {
                     </div>
                   ))}
                 </div>
+
+                {/* ISO 9001 certificate verification */}
+                <div className="mt-9 rounded-2xl border border-white/15 bg-white/[0.05] p-5 sm:p-6">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-green">
+                    Certificate verification
+                  </p>
+                  <p className="mt-2 text-sm font-semibold text-white">
+                    ISO 9001
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/55">
+                    Open the TÜV NORD certificate database and enter certificate
+                    number 4410023320247 to look up the certificate.
+                  </p>
+                  <a
+                    href="https://www.tuev-nord.de/en/certificate-database/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-brand-blueLight transition-colors hover:text-white"
+                  >
+                    Verify ISO 9001 certificate
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -126,6 +148,29 @@ export default function Certifications() {
                       {item}
                     </div>
                   ))}
+                </div>
+
+                {/* ISO 27001 certificate verification */}
+                <div className="mt-9 rounded-2xl border border-surface-200 bg-surface-50 p-5 sm:p-6">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-blue">
+                    Certificate verification
+                  </p>
+                  <p className="mt-2 text-sm font-semibold text-brand-navy">
+                    ISO/IEC 27001
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-navy/60">
+                    View OCP's certificate listing on Certipedia and check
+                    certificate number 011532230581.
+                  </p>
+                  <a
+                    href="https://www.certipedia.com/companies/668738/system_certificates?locale=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-brand-blue transition-colors hover:text-brand-navy"
+                  >
+                    View ISO 27001 certificate listing
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
 
@@ -255,128 +300,29 @@ export default function Certifications() {
         </div>
       </section>
 
+      {/* Contact call-to-action replaces Operational Trust */}
       <section className="relative overflow-hidden bg-surface-50 py-20 md:py-28">
-        {/* Background accents */}
-        <div className="absolute -left-40 top-10 h-80 w-80 rounded-full bg-brand-blue/[0.04] blur-[100px]" />
-        <div className="absolute -right-40 bottom-0 h-72 w-72 rounded-full bg-brand-green/[0.04] blur-[100px]" />
-
+        <div className="absolute -left-40 top-0 h-80 w-80 rounded-full bg-brand-blue/[0.05] blur-[110px]" />
         <div className="container-mw container-px relative">
-          {/* Heading */}
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
-              <div className="flex items-center justify-center gap-3">
-                <span className="h-px w-8 bg-brand-green" />
-
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
-                  Operational trust
-                </p>
-
-                <span className="h-px w-8 bg-brand-green" />
-              </div>
-
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
+                Let's connect
+              </p>
               <h2 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-brand-navy md:text-5xl">
-                A standard for{" "}
-                <span className="text-brand-blue">every interaction.</span>
+                Confidence starts with a conversation.
               </h2>
-
-              <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-brand-navy/55">
-                Dependable operations come from the way people, processes, and
-                technology work together.
+              <p className="mx-auto mt-5 max-w-xl leading-relaxed text-brand-navy/60">
+                Learn more about our quality standards, information security
+                practices, and how OCP can support your operations.
               </p>
-            </div>
-          </Reveal>
-
-          {/* Three pillars */}
-          <div className="mx-auto mt-14 grid max-w-5xl gap-5 md:grid-cols-3">
-            {/* PEOPLE */}
-            <Reveal delay={0.05}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-surface-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/20 hover:shadow-card">
-                <div className="absolute left-0 top-0 h-1 w-0 bg-brand-blue transition-all duration-500 group-hover:w-full" />
-
-                <div className="mb-6 flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-brand-blue" />
-
-                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-blue">
-                    People
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold text-brand-navy">
-                  Skilled people.
-                </h3>
-
-                <p className="mt-3 text-sm leading-relaxed text-brand-navy/55">
-                  Teams trained to understand the work, communicate clearly, and
-                  operate with care and accountability.
-                </p>
-
-                <div className="mt-7 h-px w-8 bg-brand-blue/30 transition-all duration-500 group-hover:w-16" />
-              </div>
-            </Reveal>
-
-            {/* PROCESS */}
-            <Reveal delay={0.1}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-surface-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-green/25 hover:shadow-card">
-                <div className="absolute left-0 top-0 h-1 w-0 bg-brand-green transition-all duration-500 group-hover:w-full" />
-
-                <div className="mb-6 flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-brand-green" />
-
-                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-green">
-                    Process
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold text-brand-navy">
-                  Disciplined processes.
-                </h3>
-
-                <p className="mt-3 text-sm leading-relaxed text-brand-navy/55">
-                  Structured workflows designed to create consistency,
-                  visibility, and dependable service delivery.
-                </p>
-
-                <div className="mt-7 h-px w-8 bg-brand-green/40 transition-all duration-500 group-hover:w-16" />
-              </div>
-            </Reveal>
-
-            {/* TECHNOLOGY */}
-            <Reveal delay={0.15}>
-              <div className="group relative h-full overflow-hidden rounded-2xl border border-surface-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/20 hover:shadow-card">
-                <div className="absolute left-0 top-0 h-1 w-0 bg-brand-blue transition-all duration-500 group-hover:w-full" />
-
-                <div className="mb-6 flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-brand-blue" />
-
-                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-blue">
-                    Technology
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold text-brand-navy">
-                  Practical technology.
-                </h3>
-
-                <p className="mt-3 text-sm leading-relaxed text-brand-navy/55">
-                  Technology that improves visibility, supports secure
-                  operations, and helps teams work more effectively.
-                </p>
-
-                <div className="mt-7 h-px w-8 bg-brand-blue/30 transition-all duration-500 group-hover:w-16" />
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Closing statement */}
-          <Reveal delay={0.2}>
-            <div className="mx-auto mt-10 flex max-w-2xl items-center justify-center gap-4">
-              <span className="h-px flex-1 bg-surface-300" />
-
-              <p className="text-center text-[9px] font-bold uppercase tracking-[0.18em] text-brand-navy/30">
-                Every layer contributes to a more dependable operation
-              </p>
-
-              <span className="h-px flex-1 bg-surface-300" />
+              <Link
+                to="/contact"
+                className="mt-8 inline-flex items-center gap-3 rounded-full bg-brand-blue px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-navy"
+              >
+                Talk to our team
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </div>
           </Reveal>
         </div>

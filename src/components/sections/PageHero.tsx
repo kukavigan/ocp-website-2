@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import { images } from "@/data/images";
 import Button from "@/components/ui/Button";
 
@@ -160,17 +159,6 @@ export default function PageHero({
 
               {/* Image overlay */}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-navy/35 via-transparent to-transparent" />
-
-              {/* Image label */}
-              <div className="absolute bottom-5 left-5">
-                <div className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-brand-green" />
-
-                  <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/75">
-                    OCP Operations
-                  </span>
-                </div>
-              </div>
             </div>
 
             {/* Bottom floating label */}
@@ -195,15 +183,6 @@ export default function PageHero({
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <Link
-        to="#content"
-        className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-[9px] font-bold uppercase tracking-[0.18em] text-brand-navy/30 transition-colors hover:text-brand-blue md:flex"
-      >
-        Scroll to explore
-        <ArrowDownRight className="h-3.5 w-3.5" />
-      </Link>
     </section>
   );
 }
