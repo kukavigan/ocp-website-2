@@ -392,7 +392,7 @@ export default function Home() {
                     duration: 1.4,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="aspect-[4/3] w-full object-cover lg:aspect-[16/11]"
+                  className="aspect-[4/3] w-full object-cover object-[31%_center] lg:aspect-[16/11]"
                 />
 
                 {/* Very subtle image depth only — no text */}

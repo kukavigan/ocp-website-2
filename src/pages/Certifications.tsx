@@ -12,7 +12,7 @@ export default function Certifications() {
         eyebrow="Certifications"
         title="Trust is built into the process."
         description="OCP’s commitment to quality and information security is supported by internationally recognized management systems."
-        image="agent"
+        image="cable"
         cta="Learn More"
       />
       <section

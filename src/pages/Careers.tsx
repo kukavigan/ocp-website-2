@@ -20,7 +20,6 @@ const hiringStatus: Record<string, boolean> = {
   "Back Office Analyst": false,
 };
 
-// Draft copy for layout review. Replace with OCP-approved job descriptions.
 const roleDetails: Record<
   string,
   { summary: string; qualifications: string[] }
@@ -147,9 +146,9 @@ export default function Careers() {
               <Reveal delay={0.15}>
                 <div className="group relative mt-10 overflow-hidden rounded-2xl">
                   <img
-                    src={images.training}
+                    src={images.development}
                     alt="OCP training session"
-                    className="h-[340px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.035] md:h-[440px]"
+                    className="h-[340px] w-full object-cover object-[75%_center] transition-transform duration-700 group-hover:scale-[1.035] md:h-[440px]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-transparent to-transparent" />
                   <p className="absolute bottom-5 left-5 text-sm font-bold text-white">

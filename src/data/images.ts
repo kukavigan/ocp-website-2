@@ -12,6 +12,8 @@ import prAbove from "@/assets/pr-above.jpg";
 
 import approvalQa from "@/assets/approval-qa.jpg";
 import pcQuality from "@/assets/pc-quality.jpg";
+import professionalDevelopment from "@/assets/professional_development.jpg";
+import serverCable from "@/assets/server_cable.jpg";
 
 import mrikaHelp from "@/assets/mrika-help.jpg";
 import mrikaTraining from "@/assets/mrika-training.jpg";
@@ -28,6 +30,8 @@ export const images = {
   meeting: ocpMeet,
   support: mrikaHelp,
   agent: focusedWork,
+  cable: serverCable,
+  development: professionalDevelopment,
 
   portrait1: markDavidson,
   portrait2: gentiMorina,
